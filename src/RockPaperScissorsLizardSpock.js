@@ -18,18 +18,11 @@ const play = (userChoice) => {
 
   console.log(`\n`)
 
-  if (user === IA){
-    console.log("------ Empate");
-  } else if (rules[user].includes(IA)){
-    console.log("! User gana");
-  } else {
-    console.log("La IA gana");
-  }
+  if (user === IA) return console.log("------ Empate");
+  console.log(rules[user].includes(IA) ? "! User gana" : "La IA gana");
 
 };
 //console.log(rules["rock"]);
 
 play(acciones[Math.floor(Math.random() * acciones.length)]);
 //play("rasasd");
-
-
